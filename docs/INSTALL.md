@@ -15,15 +15,15 @@ The app, its Safari extension, its recovery helper, and the MCP helper are inclu
 Each release includes `SHA256SUMS`. In Terminal, change to the folder containing the downloaded assets and compare their hashes with that file:
 
 ```sh
-shasum -a 256 MacSecurify-1.6.0-macOS-arm64.dmg
-shasum -a 256 MacSecurify-1.6.0-macOS-arm64.zip
+shasum -a 256 MacSecurify-1.6.1-macOS-arm64.dmg
+shasum -a 256 MacSecurify-1.6.1-macOS-arm64.zip
 ```
 
 A checksum detects transfer damage or a different file; it does not establish the publisher’s identity by itself.
 
 ## Install
 
-1. Download `MacSecurify-1.6.0-macOS-arm64.dmg` from the [latest preview release](https://github.com/DeMisterio/MacSecurify/releases/latest).
+1. Download `MacSecurify-1.6.1-macOS-arm64.dmg` from the [latest preview release](https://github.com/DeMisterio/MacSecurify/releases/latest).
 2. Open the DMG and drag **MacSecurify** to **Applications**.
 3. Eject the disk image and open **MacSecurify** from Applications.
 4. Review and acknowledge the Privacy Policy and Terms of Use, create your app password, then add applications or websites to protect.

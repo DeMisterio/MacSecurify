@@ -1,7 +1,8 @@
 # Release notes
 
-## 1.6.0 — Preview, 26 October 2026
+## 1.6.1 — Preview, 26 October 2026
 
+- Replaced the unsupported Safari settings URL with supported extension preferences and a clear manual fallback.
 - Stabilized automatic face framing during head movement and reserved status space to prevent the setup interface from bouncing.
 - Made password, Touch ID, face, external-key and recovery prompts more compact while preserving factor requirements.
 - Moved Agent MCP to the bottom of Security and added client setup guidance and terminal commands.
@@ -15,7 +16,7 @@ Development-signed preview, not Apple notarized. See the installation and securi
 - Added automatic face framing, a sharper preview and an orbiting arrow.
 - Added native HD capture with best-frame selection and bounded full-frame detector retry at unchanged security thresholds.
 - Corrected widescreen tracking geometry and clearer capture guidance.
-- User confirmed enrollment and framing worked; reported preview/interface shake, addressed in 1.6.0.
+- User confirmed enrollment and framing worked; reported preview/interface shake, addressed in 1.6.0 and retained in 1.6.1.
 
 ## 1.5.3 — Local build, 26 October 2026
 

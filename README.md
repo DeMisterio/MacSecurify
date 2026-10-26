@@ -50,7 +50,7 @@ Management actions that can weaken protection respect the strongest configured a
 
 ## Start in a few steps
 
-1. Download **MacSecurify-1.6.0-macOS-arm64.dmg** from the [latest release](https://github.com/DeMisterio/MacSecurify/releases/latest). A ZIP containing the signed `.app` is available too.
+1. Download **MacSecurify-1.6.1-macOS-arm64.dmg** from the [latest release](https://github.com/DeMisterio/MacSecurify/releases/latest). A ZIP containing the signed `.app` is available too.
 2. Open the DMG, drag **MacSecurify** to **Applications**, and launch it from there.
 3. Review the [Privacy Policy](PRIVACY.md) and [Terms of Use](TERMS.md), acknowledge both, then create your app password.
 4. Add applications in **Applications**. Add domains in **Websites** and follow **Setup & help** to enable the Safari extension.
