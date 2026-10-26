@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-labelledby="title desc">
+  <title id="title">MacSecurify</title>
+  <desc id="desc">A friendly dark crow inside a glowing shield beside the words MacSecurify. A little more intention. A little less distraction.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#151523"/><stop offset="1" stop-color="#25223c"/></linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b2a0ff"/><stop offset="1" stop-color="#65ddce"/></linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#41445f"/><stop offset="1" stop-color="#212438"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#8c72f7" stop-opacity=".2"/><stop offset="1" stop-color="#8c72f7" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1280" height="420" rx="28" fill="url(#bg)"/>
+  <circle cx="1026" cy="210" r="260" fill="url(#glow)"/>
+  <g fill="none" stroke="#b4a3fa" stroke-opacity=".08">
+    <circle cx="1028" cy="216" r="166"/><circle cx="1028" cy="216" r="212"/><circle cx="1028" cy="216" r="258"/>
+  </g>
+  <rect x="72" y="66" width="178" height="27" rx="13.5" fill="#bbb0ff" fill-opacity=".12"/>
+  <text x="89" y="84" fill="#c9bfff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" letter-spacing="2">MADE FOR YOUR MAC</text>
+  <text x="70" y="174" fill="#fcfbff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="70" font-weight="700" letter-spacing="-2.8">MacSecurify</text>
+  <text x="73" y="229" fill="#e3dff1" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="400">A little more intention.</text>
+  <text x="73" y="268" fill="#e3dff1" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="400">A little less distraction.</text>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="500" fill="#afa8c6">
+    <text x="74" y="346">APP GUARD</text><circle cx="184" cy="341" r="2" fill="#73cdbf"/>
+    <text x="201" y="346">SAFARI RULES</text><circle cx="329" cy="341" r="2" fill="#73cdbf"/>
+    <text x="347" y="346">LOCAL UNLOCK</text><circle cx="484" cy="341" r="2" fill="#73cdbf"/>
+    <text x="502" y="346">MCP AWARE</text>
+  </g>
+  <g transform="translate(894 68)">
+    <path d="M135 1C100 24 65 29 24 35v111c0 76 47 121 111 145 64-24 111-69 111-145V35C205 29 170 24 135 1Z" fill="#9c8cfc" fill-opacity=".07" stroke="url(#shield)" stroke-width="2.5"/>
+    <path d="M135 21c-28 17-58 23-90 28v97c0 62 37 101 90 124 53-23 90-62 90-124V49c-32-5-62-11-90-28Z" fill="#242338"/>
+    <ellipse cx="134" cy="236" rx="65" ry="10" fill="#121321" fill-opacity=".65"/>
+    <path d="m108 217-7 22m14-21 3 21m39-21 2 21m8-22 10 22" fill="none" stroke="#9394a9" stroke-width="5" stroke-linecap="round"/>
+    <path d="M91 137c-17 12-28 35-24 59l24-10 2 28 18-10 10 26c55 8 81-29 78-68-3-34-22-55-53-54-27 1-41 12-55 29Z" fill="url(#body)"/>
+    <path d="M178 153c15 16 19 42 9 59-16 9-33 12-52 10 16-13 24-32 23-54Z" fill="#515270" fill-opacity=".48"/>
+    <path d="M97 143c-12-20-10-41 5-60l-1-21 18 11c14-8 31-8 45-4l22-12-4 23c16 15 22 35 13 56-16 36-77 46-98 7Z" fill="url(#body)"/>
+    <path d="m99 115-27 15 28 12 14-13Z" fill="#b6bacb"/>
+    <path d="m74 130 26 2" fill="none" stroke="#767e98" stroke-width="1.5"/>
+    <ellipse cx="122" cy="113" rx="8" ry="10" fill="#f4f3ff"/>
+    <ellipse cx="124" cy="114" rx="3.3" ry="5.7" fill="#151622"/>
+    <circle cx="125.5" cy="111.5" r="1.7" fill="#fff"/>
+    <path d="m114 95 17-3" fill="none" stroke="#686b89" stroke-width="4" stroke-linecap="round"/>
+    <path d="M149 142c10 0 18-4 23-11" fill="none" stroke="#787591" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="m201 204 9 9 17-21" fill="none" stroke="#7bdfcd" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="211" cy="205" r="25" fill="#1d2d32" stroke="#6ecab9" stroke-opacity=".4"/>
+    <path d="m199 205 8 8 16-19" fill="none" stroke="#8ee5d6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
