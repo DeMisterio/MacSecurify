@@ -1,5 +1,27 @@
 # Release notes
 
+## 1.6.4 — Preview, 27 October 2026
+
+- Added step-by-step AI and face setup slides with illustrated connections, setup windows, arrows, exact commands, and verification guidance.
+- ChatGPT Desktop setup uses its MCP settings first. The optional Terminal route uses the full installed CLI path and does not require a codex alias.
+- Face setup explains downloads and circular head movement before opening the camera. Existing face engines can continue without reinstalling.
+- Includes native Apple Vision tracking from 1.6.3; the app is about 7 MB and the ZIP about 2.3 MB, with optional identity/liveness models downloaded separately.
+- Safari retains its standard content-blocker error page and manual app-based unlock flow. Safari’s own blocker-disable controls can bypass website blocking.
+
+## 1.6.3 — Local build, 27 October 2026
+
+- Replaced the bundled MediaPipe/Python tracking stack with Apple Vision, built into macOS.
+- Kept the circular enrollment guide, continuous measured landmark movement, aligned white points, preview flip, HD framing and capture selection.
+- Identity and liveness still use the separate optional InsightFace engine. Its setup downloads Python automatically when needed.
+- The developer’s local camera test confirmed that face recognition works; no measured biometric accuracy or spoof-resistance guarantee is claimed.
+
+## 1.6.2 — Preview, 27 October 2026
+
+- MediaPipe head tracking, its face model and a private Python 3.12 now ship inside the app, signed with it. Face tracking needs no setup command or Python installation.
+- The InsightFace and security-key setup commands use the bundled Python. If it's unavailable, they download the official relocatable Python build and verify its checksum. You no longer install Python yourself.
+- The first face setup after installation allows extra time while macOS verifies the bundled tracker.
+- The download is larger (about 170 MB) because it includes the tracking runtime.
+
 ## 1.6.1 — Preview, 26 October 2026
 
 - Replaced the unsupported Safari settings URL with supported extension preferences and a clear manual fallback.

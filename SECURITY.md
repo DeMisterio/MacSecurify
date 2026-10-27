@@ -17,7 +17,7 @@ Normal quit restores website locks before exiting. If restoration fails, the app
 - The app password is stored as a salted PBKDF2-SHA256 verifier in the login Keychain, rather than as a retrievable password. Failed password and face attempts share persistent retry throttling.
 - Touch ID is handled by macOS. MacSecurify does not read or store fingerprints. All fingerprints enrolled for the Mac can authenticate when Touch ID is enabled.
 - Optional face scans run in a separately installed local InsightFace environment. Camera frames remain in memory during analysis and are discarded afterward. A normalized face template is saved in the login Keychain.
-- The camera opens when face verification is selected, or automatically on an eligible authentication prompt if you enable Automatic face recognition. There is no background face monitoring. Enrollment uses separate local MediaPipe movement tracking; identity and liveness checks receive native full-frame samples.
+- The camera opens when face verification is selected, or automatically on an eligible authentication prompt if you enable Automatic face recognition. There is no background face monitoring. Enrollment uses native Apple Vision movement tracking; identity and liveness checks receive native full-frame samples.
 - Optional USB FIDO2 keys retain their private key on the authenticator. High protection requires a six-character-minimum password plus a biometric or enrolled key; Medium requires password plus biometric; Low requires one method.
 - Face scans require cached recognition and liveness models. Model setup uses the internet; failed setup or failed liveness checks refuse authentication.
 

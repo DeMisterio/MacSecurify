@@ -4,20 +4,20 @@ Face recognition and USB security keys are optional. Password unlock works at Lo
 
 ## Set up face recognition
 
-1. Install Python 3.12 on your Mac.
-2. Open **MacSecurify → Security → Face recognition → Add face** and copy the setup commands offered by the app. Run them in Terminal to install the isolated identity/liveness and MediaPipe tracking environments. Downloads require an internet connection.
-3. Return to MacSecurify, authenticate, and choose **Add face**. Allow camera access when macOS asks.
-4. Look straight ahead while the white landmarks confirm tracking. The preview frames your face automatically. Follow the arrow with a gentle circular head movement, fill the guide sections, then return to your starting position and hold still.
-5. The app selects three fresh frontal samples for identity and liveness checks before saving enrollment.
+Head movement and facial landmarks use **Apple Vision, built into macOS**. Tracking needs no additional software or model download.
 
-The installed scripts can also be launched directly:
+1. Open **MacSecurify → Security → Face recognition → Add face**. Follow the five-slide walkthrough. It explains local processing and the optional identity/liveness engine before opening the camera. If setup is needed, choose **Copy command → Open Terminal**, click Terminal, press **⌘V**, then **Return**. Copy only the command, without your username or the `%` prompt. Python is downloaded automatically if needed; downloads require an internet connection.
+2. Wait for **Face engine ready:** in Terminal, then return to the walkthrough and choose **Check installation** if needed. Existing installations skip the download. The final slide has **Start face enrollment**; only this opens the camera. Allow camera access when macOS asks.
+3. Look straight ahead while the white landmarks confirm tracking. The preview frames your face automatically. Follow the arrow with a gentle circular head movement, fill the guide sections, then return to your starting position and hold still.
+4. The app selects three fresh frontal samples for identity and liveness checks before saving enrollment.
+
+The installed script can also be launched directly:
 
 ```sh
 /bin/zsh "/Applications/MacSecurify.app/Contents/Resources/setup-insightface.sh"
-/bin/zsh "/Applications/MacSecurify.app/Contents/Resources/setup-face-tracking.sh"
 ```
 
-These commands install dependencies; they do not enroll a face or change your password. The downloaded runtimes and models are separate from the app download. Review [InsightFace licensing](https://github.com/deepinsight/insightface#license), including the supplied pretrained models’ non-commercial research restrictions, before enabling the optional feature.
+This command installs dependencies; it does not enroll a face or change your password. If Python is unavailable, the script downloads the official relocatable Python 3.12 build itself and verifies its published checksum. InsightFace's pretrained models are not included in the app. Review [InsightFace licensing](https://github.com/deepinsight/insightface#license), including the supplied pretrained models’ non-commercial research restrictions, before enabling the optional feature.
 
 ## Unlock and manage your face
 

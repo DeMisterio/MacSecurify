@@ -50,13 +50,13 @@ Management actions that can weaken protection respect the strongest configured a
 
 ## Start in a few steps
 
-1. Download **MacSecurify-1.6.1-macOS-arm64.dmg** from the [latest release](https://github.com/DeMisterio/MacSecurify/releases/latest). A ZIP containing the signed `.app` is available too.
+1. Download **MacSecurify-1.6.4-macOS-arm64.dmg** from the [latest release](https://github.com/DeMisterio/MacSecurify/releases/latest). A ZIP containing the signed `.app` is available too.
 2. Open the DMG, drag **MacSecurify** to **Applications**, and launch it from there.
 3. Review the [Privacy Policy](PRIVACY.md) and [Terms of Use](TERMS.md), acknowledge both, then create your app password.
 4. Add applications in **Applications**. Add domains in **Websites** and follow **Setup & help** to enable the Safari extension.
 5. In **Security**, choose your access duration and optional unlock methods. Agent setup is at the bottom of that page.
 
-To open a blocked website, choose **Websites → Unlock**, authenticate, and reload the Safari tab. Closing the app window keeps protection running; quitting normally requires authentication.
+Safari shows its standard content-blocker page when a site is blocked; an automatic in-browser unlock screen is not included. To open the site, choose **MacSecurify → Websites → Unlock**, authenticate, and reload the Safari tab. Closing the app window keeps protection running; quitting normally requires authentication.
 
 **Updating?** Quit the previous copy normally before replacing it. Keep one installed copy and retain your existing Application Support and Keychain data. [Install and upgrade guide →](docs/INSTALL.md)
 
@@ -64,7 +64,7 @@ To open a blocked website, choose **Websites → Unlock**, authenticate, and rel
 
 MCP gives an agent a way to ask MacSecurify what is protected, understand why an action is refused, and request a supported action. It does not force every agent to cooperate or turn MacSecurify into a system sandbox.
 
-Open **Security → Agent MCP** for client-specific setup commands and connection checks. The bundled helper runs locally over standard input/output; it needs no provider API key or separate runtime. See the [MCP guide](docs/MCP.md) for Claude Desktop, Claude Code, Codex, ChatGPT compatibility and generic client configuration.
+Open **Security → Agent MCP** for an illustrated, step-by-step connection guide. ChatGPT Desktop uses its MCP settings; the optional Terminal route uses the full installed CLI path, so no `codex` alias is needed. The bundled helper runs locally over standard input/output; it needs no provider API key or separate runtime. See the [MCP guide](docs/MCP.md) for Claude Desktop, Claude Code, Codex, ChatGPT compatibility and generic client configuration.
 
 Exceptions start disabled. A supported approval grants a bounded, credential-free **HTTPS GET to one exact origin** through MacSecurify. It does not unlock a browser or application. You must review the request in the native app and approve with hardware Touch ID.
 
@@ -72,11 +72,11 @@ Exceptions start disabled. A supported approval grants a bounded, credential-fre
 
 Basic app and website protection needs no account or publisher-operated cloud service. Password verifiers and enrolled face templates are stored in your Mac’s login Keychain. Touch ID stays with macOS. Camera frames are processed in memory and discarded. Optional face and security-key runtimes download third-party dependencies separately.
 
-Face setup uses local MediaPipe tracking and InsightFace identity/liveness models. The optional pretrained InsightFace models have **non-commercial research restrictions** and are not included in the download. Review their terms before enabling them. [Face setup and recovery →](docs/FACE-AND-RECOVERY.md)
+Face setup uses Apple Vision tracking built into macOS, and InsightFace identity/liveness models, which are installed once with a single command from the app. The optional pretrained InsightFace models have **non-commercial research restrictions** and are not included in the download. Review their terms before enabling them. [Face setup and recovery →](docs/FACE-AND-RECOVERY.md)
 
 ## Understand the protection boundary
 
-MacSecurify is intended to discourage casual physical access to your logged-in Mac. It must be running, and it does not protect against hacker attacks, malware, administrator control, `kill -9`, deliberate force termination or changes to the software. Locked apps continue background work, and their content can briefly appear during activation. Safari protection covers new requests in Safari; existing content, caches, other browsers and Safari’s own blocker controls remain outside it.
+MacSecurify is intended to discourage casual physical access to your logged-in Mac. It must be running, and it does not protect against hacker attacks, malware, administrator control, `kill -9`, deliberate force termination or changes to the software. Locked apps continue background work, and their content can briefly appear during activation. Safari protection covers new requests in Safari; existing content, caches, other browsers and Safari’s own blocker controls remain outside it. **Safari’s “Reload Without Content Blockers” bypasses website blocking without MacSecurify authentication.**
 
 A crash or forced quit during temporary website access can leave the site allowed until MacSecurify restarts. Normal quit attempts to restore website locks. Read [SECURITY.md](SECURITY.md) and the [Terms of Use](TERMS.md) before relying on the app.
 

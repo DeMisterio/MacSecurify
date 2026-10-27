@@ -36,15 +36,25 @@ claude mcp add --transport stdio --scope user macsecurify -- '/Applications/MacS
 
 This uses Claude Code's own user-level setup command. Restart Claude Code, then run `/mcp` or `claude mcp get macsecurify` to check it. See [Claude Code's official MCP instructions](https://code.claude.com/docs/en/mcp).
 
-### Codex and local ChatGPT Desktop chats
+### ChatGPT Desktop and Codex desktop
 
-With the Codex CLI installed:
+In **Security → Agent MCP**, choose your client and follow the four-slide walkthrough. ChatGPT Desktop is the default. The slides explain the purpose, local connection, setup and connection check.
+
+Use the desktop UI without installing a CLI: open **Settings → MCP servers → Add server**, enter the server name `macsecurify`, choose **STDIO**, paste `/Applications/MacSecurify.app/Contents/Helpers/MacSecurifyMCP` into **Command**, and leave arguments empty. Save and restart. See [official OpenAI MCP setup](https://learn.chatgpt.com/docs/extend/mcp).
+
+If you prefer Terminal, expand **Prefer Terminal?**. MacSecurify looks for the installed desktop app's bundled CLI or an installed CLI at a standard location. It copies a complete quoted executable path, so the command works without a `codex` alias or PATH entry. If no CLI is found, use the desktop settings route. The guide never runs commands or changes your client configuration automatically.
+
+`zsh: command not found: codex` means the shell cannot find the CLI. Repeating the same bare command will not fix it. You do not need to install a CLI to use the desktop settings route. Available settings depend on the client version and workspace policy.
+
+### Codex CLI
+
+With the Codex CLI installed and available on PATH:
 
 ```sh
 codex mcp add macsecurify -- '/Applications/MacSecurify.app/Contents/Helpers/MacSecurifyMCP'
 ```
 
-Restart the local client, then use `/mcp` or `codex mcp list`. Official OpenAI documentation describes shared MCP configuration for the ChatGPT desktop app, Codex CLI, and IDE extension. The desktop alternative is **Settings → MCP servers → Add server → STDIO**, using the executable below with no arguments. Availability can depend on the client and host being used. See [OpenAI's MCP setup documentation](https://learn.chatgpt.com/docs/extend/mcp?surface=cli).
+Restart the local client and use `/mcp` to inspect the connection.
 
 ### ChatGPT on the web and hosted cloud chats
 

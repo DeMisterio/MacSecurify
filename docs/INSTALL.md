@@ -6,24 +6,24 @@
 - macOS 13 Ventura or later.
 - Safari for website blocking. Other browsers are not covered.
 - A Touch ID-capable Mac or compatible keyboard for optional Touch ID and native MCP grant approval.
-- A camera and a separately configured Python 3.12 face engine for optional face recognition.
+- A camera for optional face recognition. Head tracking uses Apple Vision built into macOS. The separate identity engine is installed once using the app’s guided command, which downloads Python automatically if needed.
 
-The app, its Safari extension, its recovery helper, and the MCP helper are included in the DMG. Optional face/tracking and USB security-key runtimes and models are downloaded separately. The ZIP download contains the same signed application bundle; extract it and move MacSecurify.app to Applications.
+The app, its Safari extension, its recovery helper, and the MCP helper are included in the DMG. Optional face identity/liveness and USB security-key runtimes and models are downloaded separately. The ZIP download contains the same signed application bundle; extract it and move MacSecurify.app to Applications.
 
 ## Verify your download
 
 Each release includes `SHA256SUMS`. In Terminal, change to the folder containing the downloaded assets and compare their hashes with that file:
 
 ```sh
-shasum -a 256 MacSecurify-1.6.1-macOS-arm64.dmg
-shasum -a 256 MacSecurify-1.6.1-macOS-arm64.zip
+shasum -a 256 MacSecurify-1.6.4-macOS-arm64.dmg
+shasum -a 256 MacSecurify-1.6.4-macOS-arm64.zip
 ```
 
 A checksum detects transfer damage or a different file; it does not establish the publisher’s identity by itself.
 
 ## Install
 
-1. Download `MacSecurify-1.6.1-macOS-arm64.dmg` from the [latest preview release](https://github.com/DeMisterio/MacSecurify/releases/latest).
+1. Download `MacSecurify-1.6.4-macOS-arm64.dmg` from the [latest preview release](https://github.com/DeMisterio/MacSecurify/releases/latest).
 2. Open the DMG and drag **MacSecurify** to **Applications**.
 3. Eject the disk image and open **MacSecurify** from Applications.
 4. Review and acknowledge the Privacy Policy and Terms of Use, create your app password, then add applications or websites to protect.
@@ -60,8 +60,9 @@ Choose 1–60 minutes of access in **Security**. **Lock all now** ends active ac
 | Symptom | Check |
 | --- | --- |
 | A site still appears in Safari | Confirm the extension is enabled, return to MacSecurify and refresh its status, then reload the page. Existing page content and caches are outside this guard. |
+| Safari shows a content-blocker error instead of an unlock screen | This is the expected website-blocking screen. Open MacSecurify → Websites → Unlock and authenticate. An automatic in-browser unlock page is not included. |
 | A website is accessible in another browser | Website blocking covers Safari only. |
-| Face setup is unavailable | Install Python 3.12 and complete the separate setup. See [face recognition](FACE-AND-RECOVERY.md). |
+| Face setup is unavailable | Follow the slides in Add face; the setup command downloads Python if needed. See [face recognition](FACE-AND-RECOVERY.md). |
 | Touch ID is unavailable | Confirm it is configured in macOS. App unlock can use your password; an MCP capability cannot be approved without hardware Touch ID. |
 | An MCP client cannot connect | Keep MacSecurify running and launch the helper from the same installed app bundle. See [MCP setup](MCP.md). |
 | An agent request is refused | Check the reported reason, app mode, integration trust, and requested scope. Browser-wide unlocks are unsupported. |
@@ -73,3 +74,5 @@ See [security boundaries](../SECURITY.md) before relying on the app for a partic
 Before password setup, review and acknowledge the [Privacy Policy](../PRIVACY.md) and [Terms of Use](../TERMS.md). Both are available in the app later.
 
 The Safari setup guide appears after password creation. Enable **MacSecurify Blocker** in Safari settings, return and check the status, then add domains in **Websites**. To open a blocked domain, choose **MacSecurify → Websites → Unlock**, authenticate, and reload the original tab if necessary. The domain opens in Safari only after its rule update succeeds. Use **Setup & help** to reopen the guide.
+
+Safari’s **Reload Without Content Blockers** and extension-disable controls bypass this website blocking without MacSecurify authentication. This preview does not prevent the owner of the logged-in macOS account from changing Safari settings.
